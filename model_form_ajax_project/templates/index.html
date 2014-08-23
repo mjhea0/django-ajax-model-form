@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/helper.js"></script>
+</head>
+<body>
+    <h1>Leave a Suggestion Here</h1>
+    <div class="message"></div>
+    <div>
+        <form id="feed_form" action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit Feedback" />
+        </form>
+    </div>
+    <div class="feedback">
+        <ul id="feedback">
+        </ul>
+    </div>
+</body>
+</html>
